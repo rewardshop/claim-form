@@ -1,43 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Information Form</title>
 
-<title>User Registration</title>
+<style>
 
-<link rel="stylesheet" href="style.css">
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0;
+}
 
+.container{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    width:350px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+label{
+    font-weight:bold;
+    display:block;
+    margin-top:10px;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+input:focus, textarea:focus{
+    outline:none;
+    border-color:#4facfe;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    border:none;
+    background:#4facfe;
+    color:white;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#2f80ed;
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="container">
-
 <h2>User Information</h2>
 
-<form id="userForm">
+<form action="YOUR_SCRIPT_URL" method="POST">
 
 <label>Name</label>
-<input type="text" name="name" required>
+<input type="text" name="name" placeholder="Enter your name" required>
 
 <label>Address</label>
-<textarea name="address" required></textarea>
+<textarea name="address" placeholder="Enter your address" required></textarea>
 
 <label>Contact Number</label>
-<input type="tel" name="contact" pattern="[0-9]{10,15}" required>
+<input type="tel" name="contact" placeholder="Enter contact number" required>
 
-<button type="submit" id="submitBtn">Submit</button>
-
-<div id="loading">Submitting...</div>
-<div id="success">✅ Submission successful!</div>
+<button type="submit">Submit</button>
 
 </form>
 
 </div>
-
-<script src="script.js"></script>
 
 </body>
 </html>
